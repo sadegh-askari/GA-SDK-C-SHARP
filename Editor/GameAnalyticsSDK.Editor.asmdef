@@ -2,7 +2,9 @@
     "name": "GameAnalyticsSDK.Editor",
     "rootNamespace": "",
     "references": [
-        "GUID:40c324c01976043089f937f5576811ce"
+        "GUID:0acc523941302664db1f4e527237feb3",
+        "GUID:27619889b8ba8c24980f49ee34dbb44a",
+        "GUID:b8eee5a2820ff4bcb84727881a8eecd7"
     ],
     "includePlatforms": [
         "Editor"

@@ -65,28 +65,28 @@ namespace GameAnalyticsSDK.Events
 
         private static void SubmitError(string message, LogType type)
         {
-            GAErrorSeverity severity = GAErrorSeverity.Info;
+            EGAErrorSeverity severity = EGAErrorSeverity.Info;
 
             switch (type)
             {
             case LogType.Assert:
-                severity = GAErrorSeverity.Info;
+                severity = EGAErrorSeverity.Info;
                 break;
             case LogType.Error:
-                severity = GAErrorSeverity.Error;
+                severity = EGAErrorSeverity.Error;
                 break;
             case LogType.Exception:
-                severity = GAErrorSeverity.Critical;
+                severity = EGAErrorSeverity.Critical;
                 break;
             case LogType.Log:
-                severity = GAErrorSeverity.Debug;
+                severity = EGAErrorSeverity.Debug;
                 break;
             case LogType.Warning:
-                severity = GAErrorSeverity.Warning;
+                severity = EGAErrorSeverity.Warning;
                 break;
             }
 
-            GA_Error.NewEvent(severity, message, null, false);
+            GameAnalytics.NewErrorEvent(severity, message, null, false);
         }
 
         /// <summary>
